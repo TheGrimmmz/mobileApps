@@ -14,8 +14,6 @@ const PATTERN = [
   1 * ONE_SEC_IN_MS,
   1 * ONE_SEC_IN_MS,
   1 * ONE_SEC_IN_MS,
-  1 * ONE_SEC_IN_MS,
-  1 * ONE_SEC_IN_MS,
 ];
 
 export const Timer = ({ focusSubject, clearSubject, onTimerEnd }) => {
@@ -40,6 +38,7 @@ export const Timer = ({ focusSubject, clearSubject, onTimerEnd }) => {
           isPaused={!isStarted}
           onProgress={setProgress}
           onEnd={onEnd}
+          onReset={clearSubject}
         />
         <View style={{ paddingTop: spacing.xxl }}>
           <Text style={styles.title}>FOCUSING ON: </Text>
